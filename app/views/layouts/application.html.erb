@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黄晓磊的个人主页">
+  <meta name="author" content="smallgoldstone">
+  <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+  <title>住在井底的青蛙 -- smallgoldstone & SGS Studio </title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "justified-nav.css", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+
+			<div class="masthead">
+			  <h3 class="text-muted">住在井底的青蛙</h3>
+			  <ul class="nav nav-justified">
+			    <li <%= yield :home %>><%= link_to  "Home", root_path %></li>
+			    <li <%= yield :project %>><a href="#">项目 & 产品</a></li>
+			    <li <%= yield :service %>><a href="#">可提供的服务</a></li>
+			    <li <%= yield :me %>><%= link_to "我", controller: "home", action: "me"  %></li>
+					<li <%= yield :share %>><a href="#">开源 & 分享</a></li>
+					<li <%= yield :contact %>><a href="#">留言 & 联系我</a></li>
+			  </ul>
+			</div>
+
+      <%= yield %>
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>&copy; 2014 住在井底的青蛙 &nbsp; 备案：辽ICP备14002090号&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5806213'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D5806213' type='text/javascript'%3E%3C/script%3E"));</script></p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
