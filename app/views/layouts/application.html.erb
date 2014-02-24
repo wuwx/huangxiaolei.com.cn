@@ -28,7 +28,8 @@
 <div class="container">
 
 			<div class="masthead">
-			  <h3 class="text-muted">住在井底的青蛙</h3>
+          <%= image_tag "logo.gif", :class => "img-rounded logo-img" %>
+  			  <h1 class="text-muted">住在井底的青蛙</h1>
 			  <ul class="nav nav-justified">
 			    <li <%= yield :home %>><%= link_to  "Home", root_path %></li>
 			    <li <%= yield :project %>><a href="#">项目 & 产品</a></li>

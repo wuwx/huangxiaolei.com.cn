@@ -21,6 +21,11 @@ body {
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
 
+.logo-img{
+  float: left;
+  vertical-align: middle;
+  width: 90px;
+}
 .nav-justified {
   background-color: #eee;
   border-radius: 5px;
