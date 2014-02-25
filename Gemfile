@@ -48,3 +48,5 @@ gem 'therubyracer', '0.11.4', :require => 'v8', :platforms => :ruby
 group :production do
   gem 'mysql2'
 end
+
+gem 'devise'
