@@ -26,5 +26,5 @@ production:
   pool: 5
   host: localhost
   port: 3306
-  username: huangxiaolei.com.cn
+  username: huangxiaolei
   password: huangxiaolei.com.cn
