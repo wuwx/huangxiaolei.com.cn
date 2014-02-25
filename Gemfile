@@ -45,4 +45,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'therubyracer', '0.11.4', :require => 'v8', :platforms => :ruby
-gem 'mysql2'
+group :production do
+  gem 'mysql2'
+end
