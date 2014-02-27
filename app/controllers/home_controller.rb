@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 	end
 
   def me
+  	@me = Me.first
   end
   
 end

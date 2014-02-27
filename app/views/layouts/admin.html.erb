@@ -34,7 +34,7 @@
 			    <li <%= yield :home %>><%= link_to  "Home", admin_console_path %></li>
 			    <li <%= yield :project %>><a href="#">项目 & 产品</a></li>
 			    <li <%= yield :service %>><a href="#">可提供的服务</a></li>
-			    <li <%= yield :me %>><%= link_to "我", home_me_path  %></li>
+			    <li <%= yield :me %>><%= link_to "我", admin_edit_me_path  %></li>
 					<li <%= yield :share %>><a href="#">开源 & 分享</a></li>
 					<li <%= yield :contact %>><a href="#">留言 & 联系我</a></li>
 			  </ul>
@@ -46,7 +46,7 @@
       <div class="footer">
         <p>&copy; 2014 住在井底的青蛙 &nbsp; 备案：<a href="http://www.miitbeian.gov.cn/">辽ICP备14002090号</a>&nbsp;
           <% if user_signed_in? %>
-            后台管理 <%= link_to "退出", destroy_user_session_path, :method => :delete %>
+            <%= link_to '网站', root_path %> &nbsp; <%= link_to "退出", destroy_user_session_path, :method => :delete %>
           <% end %>
            
         </p>

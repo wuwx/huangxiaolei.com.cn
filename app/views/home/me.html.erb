@@ -1,3 +1,5 @@
 <% content_for :me do %>
 	class="active"
 <% end %>
+
+<%= @me.content.html_safe() %>

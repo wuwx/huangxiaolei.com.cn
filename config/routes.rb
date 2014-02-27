@@ -3,6 +3,8 @@ HuangxiaoleiComCn::Application.routes.draw do
   get "home/me"
   get "home/index"
   get "admin/console"
+  get "admin/edit_me"
+  patch "admin/update_me"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

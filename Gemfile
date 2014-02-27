@@ -50,3 +50,4 @@ group :production do
 end
 
 gem 'devise'
+gem 'rails_kindeditor'

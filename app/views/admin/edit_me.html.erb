@@ -1,0 +1,5 @@
+<h2>编辑关于我</h2>
+<%= form_for @me, url: admin_update_me_path do |f| %>
+	<%= f.kindeditor :content %>
+	<%= f.submit '保存'%>
+<%end%>
