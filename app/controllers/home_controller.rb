@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 	end
 
   def me
-  	@me = Me.first
+  	@me = Me.first || Me.create
   end
   
 end

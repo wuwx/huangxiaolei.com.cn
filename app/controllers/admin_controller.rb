@@ -5,11 +5,7 @@ class AdminController < ApplicationController
 	end
 
 	def edit_me
-		@me = Me.first
-		if @me == nil
-			@me = Me.new
-			@me.save
-		end
+		@me = Me.first || Me.create
 	end
 
 	def update_me
