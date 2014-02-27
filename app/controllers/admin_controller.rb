@@ -6,6 +6,10 @@ class AdminController < ApplicationController
 
 	def edit_me
 		@me = Me.first
+		if @me == nil
+			@me = Me.new
+			@me.save
+		end
 	end
 
 	def update_me
