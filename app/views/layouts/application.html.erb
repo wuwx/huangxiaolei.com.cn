@@ -44,12 +44,12 @@
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; 2014 住在井底的青蛙 &nbsp; 备案：<a href="http://www.miitbeian.gov.cn/">辽ICP备14002090号</a>&nbsp;<script src="http://s13.cnzz.com/stat.php?id=5806213&web_id=5806213" language="JavaScript"></script>
+        <p>&copy; 2014 住在井底的青蛙 &nbsp; 备案：<a href="http://www.miitbeian.gov.cn/">辽ICP备14002090号</a>&nbsp;<script src="http://s13.cnzz.com/stat.php?id=5806213&web_id=5806213" language="JavaScript"></script>&nbsp;
+          <%= link_to "后台管理", admin_console_path %>&nbsp;
           <% if user_signed_in? %>
-            后台管理 <%= link_to "退出", destroy_user_session_path, :method => :delete %>
-          <% else %>
-            <%= link_to "登录后台", new_session_path(:user) %>
+            <%= link_to "退出", destroy_user_session_path, :method => :delete %>
           <% end %>
+            
         </p>
       </div>
 

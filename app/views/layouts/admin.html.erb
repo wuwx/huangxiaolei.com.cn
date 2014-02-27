@@ -9,7 +9,7 @@
   <meta name="author" content="smallgoldstone">
   <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-  <title>住在井底的青蛙 -- smallgoldstone & SGS Studio </title>
+  <title>后台管理 -- 住在井底的青蛙 -- smallgoldstone & SGS Studio </title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
@@ -29,9 +29,9 @@
 
 			<div class="masthead">
           <%= image_tag "logo.gif", :class => "img-rounded logo-img" %>
-  			  <h1 class="text-muted">住在井底的青蛙</h1>
+  			  <h1 class="text-muted">后台管理 -- 住在井底的青蛙</h1>
 			  <ul class="nav nav-justified">
-			    <li <%= yield :home %>><%= link_to  "Home", root_path %></li>
+			    <li <%= yield :home %>><%= link_to  "Home", admin_console_path %></li>
 			    <li <%= yield :project %>><a href="#">项目 & 产品</a></li>
 			    <li <%= yield :service %>><a href="#">可提供的服务</a></li>
 			    <li <%= yield :me %>><%= link_to "我", home_me_path  %></li>
@@ -44,12 +44,11 @@
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; 2014 住在井底的青蛙 &nbsp; 备案：<a href="http://www.miitbeian.gov.cn/">辽ICP备14002090号</a>&nbsp;<script src="http://s13.cnzz.com/stat.php?id=5806213&web_id=5806213" language="JavaScript"></script>
+        <p>&copy; 2014 住在井底的青蛙 &nbsp; 备案：<a href="http://www.miitbeian.gov.cn/">辽ICP备14002090号</a>&nbsp;
           <% if user_signed_in? %>
             后台管理 <%= link_to "退出", destroy_user_session_path, :method => :delete %>
-          <% else %>
-            <%= link_to "登录后台", new_session_path(:user) %>
           <% end %>
+           
         </p>
       </div>
 
