@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
 	
-	def index
-	end
+  def index
+  end
 
   def me
-  	@me = Me.first || Me.create
+    @me = Me.first || Me.create
   end
   
 end
