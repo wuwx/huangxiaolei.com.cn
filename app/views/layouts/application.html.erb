@@ -32,11 +32,10 @@
   			  <h1 class="text-muted">住在井底的青蛙</h1>
 			  <ul class="nav nav-justified">
 			    <li <%= yield :home %>><%= link_to  "Home", root_path %></li>
-			    <li <%= yield :project %>><a href="#">项目 & 产品</a></li>
-			    <li <%= yield :service %>><a href="#">可提供的服务</a></li>
-			    <li <%= yield :me %>><%= link_to "我", home_me_path  %></li>
-					<li <%= yield :share %>><a href="#">开源 & 分享</a></li>
-					<li <%= yield :contact %>><a href="#">留言 & 联系我</a></li>
+          <li <%= yield :me %>><%= link_to "我", home_me_path  %></li>
+          <%= content_tag_for :li, Page.all do |page| %>
+            <%= link_to page.title, page %>
+          <% end %>
 			  </ul>
 			</div>
 
