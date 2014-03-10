@@ -33,8 +33,10 @@
 			  <ul class="nav nav-justified">
 			    <li <%= yield :home %>><%= link_to  "Home", root_path %></li>
           <li <%= yield :me %>><%= link_to "我", home_me_path  %></li>
-          <%= content_tag_for :li, Page.all do |page| %>
-            <%= link_to page.title, page %>
+          <% Page.all.each do |page| %>
+            <%= content_tag :li, :class => ("active" if current_page?(page)) do %>
+              <%= link_to page.title, page %>
+            <% end %>
           <% end %>
 			  </ul>
 			</div>
