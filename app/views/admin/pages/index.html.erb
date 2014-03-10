@@ -1,0 +1,12 @@
+<table class="table">
+  <thead>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <%= content_tag_for :tr, @pages do |page| %>
+      <th width="80"><%= "##{page.id}" %></th>
+      <td><%= link_to page.title, [:edit, :admin, page] %></td>
+    <% end %>
+  </tbody>
+</table>
